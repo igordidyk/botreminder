@@ -13,9 +13,8 @@ public class BotApplication {
         TelegramBotsApi api = new TelegramBotsApi();
         try {
             api.registerBot(new Bot());
-        }
-        catch (TelegramApiException e){
-        log.error("TelegramApi failed to register new Bot", e.getMessage());
+        } catch (TelegramApiException e) {
+            log.error("TelegramApi failed to register new Bot", e.getMessage());
         }
     }
 }
