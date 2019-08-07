@@ -10,11 +10,10 @@
     <packaging>jar</packaging>
 
     <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.version>1.8</java.version>
+        <java.version>11</java.version>
         <lombok.version>1.18.2</lombok.version>
-        <telegrambots.version>4.1</telegrambots.version>
+        <telegrambots.version>4.2</telegrambots.version>
+        <maven.compiler.version>3.8.1</maven.compiler.version>
     </properties>
 
     <dependencies>
@@ -35,10 +34,9 @@
 
         <dependency>
             <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
+            <artifactId>slf4j-simple</artifactId>
             <version>1.7.25</version>
         </dependency>
-
     </dependencies>
 
 
@@ -47,10 +45,9 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven.compiler.version}</version>
                 <configuration>
-                    <source>${java.version}</source>
-                    <target>${java.version}</target>
-                    <encoding>${build.sourceDirectory}</encoding>
+                    <release>${java.version}</release>
                 </configuration>
             </plugin>
         </plugins>
